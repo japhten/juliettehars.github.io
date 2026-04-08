@@ -1,230 +1,506 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- verification: keep yours -->
-  <meta name="google-site-verification" content="nrPx5dEHKB2samp8mzR_zHHEN_LmnEPIbsZei3MOo00" />
+<meta name="google-site-verification" content="nrPx5dEHKB2samp8mzR_zHHEN_LmnEPIbsZei3MOo00" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Juliette Hars — Robotics & Soft Robotics Researcher</title>
+<meta name="description" content="Juliette Hars — PhD student at CREATE Lab (EPFL). Research in soft robotics, wearable sensing, and data-driven design. MSc Robotics from EPFL, master thesis at Oxford.">
+<meta property="og:title" content="Juliette Hars — CREATE Lab (EPFL)">
+<meta property="og:description" content="PhD student in soft robotics & wearable sensing at EPFL CREATE Lab.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://japhten.github.io/juliettehars.github.io/">
+<meta property="og:image" content="https://japhten.github.io/juliettehars.github.io/assets/profile.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Juliette Hars","url":"https://japhten.github.io/juliettehars.github.io/","sameAs":["https://www.linkedin.com/in/juliette-hars-ab859620b/","https://github.com/japhten","https://people.epfl.ch/juliette.hars"],"jobTitle":"PhD Student","worksFor":{"@type":"Organization","name":"CREATE Lab, EPFL"}}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#1A2B45;
+  --ink-2:#3D5170;
+  --ink-3:#7A90AD;
+  --red:#C8102E;
+  --red-light:#F5E6E9;
+  --bg:#FAFAF8;
+  --bg-2:#F3F2EF;
+  --bg-3:#ECEAE5;
+  --border:#DDD9D0;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'DM Sans',system-ui,sans-serif;
+  --max:860px;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
 
-  <!-- Basic SEO / social preview -->
-  <meta name="description" content="Juliette Hars — PhD student at CREATE Lab (EPFL). Research: knitted & crocheted fabrics for sensitive wearables and functional textiles.">
-  <meta property="og:title" content="Juliette Hars — CREATE Lab (EPFL) — knitted & crocheted sensing">
-  <meta property="og:description" content="PhD student at CREATE Lab (EPFL). Research on knitted and crocheted fabrics to develop sensitive wearable devices.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://juliettehars.github.io/">
-  <meta property="og:image" content="https://juliettehars.github.io/assets/profile.jpg">
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(250,250,248,0.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:0 1.5rem}
+.nav-inner{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:52px}
+.nav-name{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--ink);text-decoration:none;letter-spacing:0.01em}
+.nav-links{display:flex;gap:1.5rem;list-style:none}
+.nav-links a{color:var(--ink-2);text-decoration:none;font-size:0.875rem;font-weight:400;letter-spacing:0.02em;transition:color .2s}
+.nav-links a:hover{color:var(--red)}
 
-  <!-- JSON-LD person (EPFL affiliation) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Juliette Hars",
-    "url": "https://juliettehars.github.io/",
-    "sameAs": [
-      "https://www.linkedin.com/in/juliette-hars-ab859620b/",
-      "https://github.com/japhten",
-      "https://people.epfl.ch/juliette.hars"
-    ],
-    "jobTitle": "PhD Student — CREATE Lab (EPFL)",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "CREATE Lab, EPFL",
-      "url": "https://www.epfl.ch/labs/create/"
-    }
-  }
-  </script>
+/* SECTIONS */
+section{padding:4rem 1.5rem}
+.container{max-width:var(--max);margin:0 auto}
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Juliette Hars — portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
-  <style>
-    /* ===== spacing tweaks ===== */
-    .panel { padding: 32px 1rem; }
-    .panel.compact { padding: 16px 1rem; }
+/* HERO */
+#hero{padding:5rem 1.5rem 4rem;background:var(--bg)}
+.hero-grid{display:grid;grid-template-columns:160px 1fr;gap:3rem;align-items:start}
+.profile-pic{width:150px;height:150px;border-radius:50%;object-fit:cover;border:3px solid var(--border)}
+.hero-tag{display:inline-block;font-size:0.78rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--red);margin-bottom:0.75rem}
+h1.hero-name{font-family:var(--serif);font-size:3rem;font-weight:500;line-height:1.1;color:var(--ink);margin-bottom:0.4rem}
+.hero-role{font-size:1.05rem;color:var(--ink-2);margin-bottom:0.25rem}
+.hero-inst{font-size:0.95rem;color:var(--ink-3);margin-bottom:1.25rem}
+.hero-bio{font-size:1rem;color:var(--ink-2);line-height:1.75;max-width:520px;font-style:italic;font-family:var(--serif);font-size:1.1rem}
+.hero-links{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.5rem}
+.pill{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.8rem;padding:0.3rem 0.8rem;border-radius:20px;border:1px solid var(--border);color:var(--ink-2);text-decoration:none;font-weight:400;transition:all .2s}
+.pill:hover{border-color:var(--ink);color:var(--ink)}
+.pill svg{width:13px;height:13px;flex-shrink:0}
 
-    .hero-grid { grid-template-columns: 180px 1fr; }
-    .profile-pic { width:160px; height:160px; border-radius:50%; object-fit:cover; }
+/* SECTION HEADERS */
+h2.sec{font-family:var(--serif);font-size:2rem;font-weight:500;color:var(--ink);margin-bottom:0.25rem}
+.sec-rule{width:36px;height:2px;background:var(--red);margin-bottom:2rem}
+p.sec-lead{color:var(--ink-2);margin-bottom:2rem;font-size:1rem}
 
-    .demo { margin: 20px 0; display:grid; grid-template-columns: 340px 1fr; gap:20px; align-items:start; }
-    .demo iframe { width:100%; aspect-ratio:16/9; border-radius:8px; display:block; }
+/* ABOUT */
+#about{background:var(--bg-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.about-body{font-size:1.05rem;line-height:1.85;color:var(--ink-2)}
+.about-body strong{color:var(--ink);font-weight:500}
+.pub-highlight{margin-top:1.5rem;padding:1rem 1.25rem;background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--red);border-radius:0 6px 6px 0}
+.pub-highlight p{font-size:0.9rem;color:var(--ink-2);margin:0}
+.pub-highlight a{color:var(--red);text-decoration:none}
+.pub-highlight a:hover{text-decoration:underline}
 
-    .cards { display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap:16px; margin-top:12px; }
-    .card {
-      background: #fff;
-      border: 1px solid rgba(3,19,43,0.04);
-      border-radius: 10px;
-      padding: 14px;
-      box-shadow: 0 4px 18px rgba(2,12,40,0.03);
-      min-height: 120px;
-      display:flex;
-      flex-direction:column;
-      gap:8px;
-    }
-    .card h4 { margin:0; font-size:1rem; color:var(--blue-1); display:flex; align-items:center; gap:8px; }
-    .card p { margin:0; color:var(--muted); font-size:0.95rem; }
-    .card ul { margin:6px 0 0 18px; padding:0; color:var(--oxford); }
-    .card a { color:var(--blue-1); text-decoration:underline; }
-    .small-meta { font-size:0.85rem; color:var(--muted); }
+/* EDUCATION TIMELINE */
+#education{background:var(--bg)}
+.timeline{position:relative;padding-left:1.5rem}
+.timeline::before{content:'';position:absolute;left:5px;top:6px;bottom:6px;width:1px;background:var(--border)}
+.tl-item{position:relative;margin-bottom:2rem;padding-left:1.5rem}
+.tl-item::before{content:'';position:absolute;left:-1.5rem;top:7px;width:8px;height:8px;border-radius:50%;background:var(--red);border:2px solid var(--bg)}
+.tl-year{font-size:0.78rem;font-weight:500;letter-spacing:0.08em;color:var(--red);text-transform:uppercase;margin-bottom:0.15rem}
+.tl-title{font-family:var(--serif);font-size:1.15rem;font-weight:500;color:var(--ink);margin-bottom:0.1rem}
+.tl-sub{font-size:0.9rem;color:var(--ink-2)}
+.tl-grade{display:inline-block;font-size:0.75rem;padding:0.15rem 0.5rem;background:var(--bg-3);border-radius:4px;color:var(--ink-2);margin-top:0.25rem;font-weight:500}
 
-    .wip-banner {
-      background: linear-gradient(90deg, rgba(11,61,145,0.06), rgba(59,130,246,0.04));
-      border-left: 4px solid var(--blue-1);
-      padding: 10px 14px;
-      border-radius: 8px;
-      margin-bottom:14px;
-      color:var(--oxford);
-    }
+/* EXPERIENCE */
+#experience{background:var(--bg-2);border-top:1px solid var(--border)}
+.exp-list{display:flex;flex-direction:column;gap:1.5rem}
+.exp-card{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:1.25rem 1.5rem;position:relative}
+.exp-card:hover{border-color:var(--ink-3)}
+.exp-header{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap;margin-bottom:0.5rem}
+.exp-org{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--ink)}
+.exp-date{font-size:0.78rem;color:var(--ink-3);white-space:nowrap;font-weight:400}
+.exp-role{font-size:0.85rem;font-weight:500;color:var(--red);margin-bottom:0.5rem;letter-spacing:0.03em}
+.exp-desc{font-size:0.92rem;color:var(--ink-2);line-height:1.7}
 
-    @media (max-width:900px){ .demo{grid-template-columns:1fr; } .hero-grid{grid-template-columns: 1fr;} .profile-pic{width:140px;height:140px} .cards{grid-template-columns:1fr} }
-  </style>
+/* PROJECTS */
+#projects{background:var(--bg)}
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.proj-card{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:1.25rem;display:flex;flex-direction:column;gap:0.5rem;transition:border-color .2s,transform .2s}
+.proj-card:hover{border-color:var(--ink-3);transform:translateY(-2px)}
+.proj-year{font-size:0.72rem;font-weight:500;letter-spacing:0.1em;color:var(--ink-3);text-transform:uppercase}
+.proj-title{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--ink);line-height:1.3}
+.proj-desc{font-size:0.87rem;color:var(--ink-2);line-height:1.65;flex:1}
+.proj-tags{display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:0.25rem}
+.tag{font-size:0.72rem;padding:0.2rem 0.5rem;background:var(--bg-2);border:1px solid var(--border);border-radius:4px;color:var(--ink-2)}
+.proj-grade{font-size:0.75rem;font-weight:500;color:var(--red);margin-top:0.25rem}
+
+/* SKILLS */
+#skills{background:var(--bg-2);border-top:1px solid var(--border)}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem}
+.skill-group h4{font-size:0.78rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-3);margin-bottom:0.75rem}
+.skill-chips{display:flex;flex-wrap:wrap;gap:0.35rem}
+.chip{font-size:0.82rem;padding:0.25rem 0.6rem;background:var(--bg);border:1px solid var(--border);border-radius:4px;color:var(--ink-2)}
+.lang-row{display:flex;align-items:center;justify-content:space-between;padding:0.3rem 0;border-bottom:1px solid var(--border)}
+.lang-row:last-child{border-bottom:none}
+.lang-name{font-size:0.9rem;color:var(--ink)}
+.lang-level{font-size:0.78rem;color:var(--ink-3)}
+.dots{display:flex;gap:3px;margin-left:auto;margin-right:0.75rem}
+.dot{width:7px;height:7px;border-radius:50%}
+.dot.on{background:var(--red)}
+.dot.off{background:var(--border)}
+
+/* AWARDS */
+#awards{background:var(--bg)}
+.awards-list{display:flex;flex-direction:column;gap:1rem}
+.award-item{display:flex;gap:1.25rem;align-items:flex-start}
+.award-year{font-size:0.78rem;font-weight:500;color:var(--red);min-width:36px;padding-top:0.15rem;letter-spacing:0.05em}
+.award-body{font-size:0.92rem;color:var(--ink-2);line-height:1.65}
+.award-body strong{color:var(--ink);font-weight:500}
+.award-body a{color:var(--red);text-decoration:none}
+.award-body a:hover{text-decoration:underline}
+
+/* CONTACT */
+#contact{background:var(--bg-2);border-top:1px solid var(--border)}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+.contact-card{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:1rem 1.25rem}
+.contact-card h4{font-size:0.75rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-3);margin-bottom:0.5rem}
+.contact-card a{color:var(--ink);text-decoration:none;font-size:0.9rem;word-break:break-word}
+.contact-card a:hover{color:var(--red)}
+
+/* FOOTER */
+footer{background:var(--ink);color:rgba(255,255,255,0.4);text-align:center;padding:1.5rem;font-size:0.82rem}
+footer a{color:rgba(255,255,255,0.5);text-decoration:none}
+
+/* DIVIDER */
+.vert-rule{width:1px;background:var(--border);align-self:stretch}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* RESPONSIVE */
+@media(max-width:680px){
+  .hero-grid{grid-template-columns:1fr;gap:1.5rem}
+  h1.hero-name{font-size:2.2rem}
+  .nav-links{gap:1rem}
+  .nav-links li:nth-child(n+4){display:none}
+  section{padding:3rem 1.25rem}
+  .proj-grid{grid-template-columns:1fr}
+}
+</style>
 </head>
 <body>
-  <main>
 
-    <!-- HERO -->
-    <section id="hero" class="panel hero">
-      <div class="container hero-grid">
-        <div class="hero-left">
-          <!-- replace profile.jpg with Juliette's photo in assets/ -->
-          <img src="assets/profile.jpg" alt="Juliette Hars" class="profile-pic" />
-        </div>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-name" href="#hero">Juliette Hars</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
 
-        <div class="hero-right">
-          <h1 class="hero-name">Juliette Hars</h1>
-          <p class="hero-title">PhD Student — CREATE Lab</p>
-          <p class="hero-group">Swiss Federal Institute of Technology (EPFL)</p>
-
-          <p class="lead">
-            Researching knitted &amp; crocheted fabrics as a route to sensitive wearable technologies and functional textiles for human sensing and interaction.
-          </p>
-        </div>
+<!-- HERO -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <img src="assets/profile.jpg" alt="Juliette Hars" class="profile-pic" />
       </div>
-    </section>
-
-    <!-- WORK-IN-PROGRESS BANNER -->
-    <section class="panel compact">
-      <div class="container">
-        <div class="wip-banner">
-          <strong>Work in progress:</strong> This page is being built — publications, demos and media will be added here soon. If you want to suggest content or report an issue, contact <a href="mailto:juliette.hars@epfl.ch">juliette.hars@epfl.ch</a>.
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="panel reveal">
-      <div class="container">
-        <h2>About</h2>
-
-        <p>
-          Juliette Hars is a doctoral student at the CREATE Lab, EPFL. Her research focuses on using knitted and crocheted textile structures to create soft, conformal wearable sensors and actuator structures — combining textile design, materials, and sensing to create sensitive wearables and functional garments. (EPFL profile). 
-        </p>
-
-        <p style="margin-top:10px;">
-          Current work explores fabrication methods, sensor integration, and characterization of textile-based sensing elements with the aim of practical wearable prototypes. Publications and technical reports are listed in EPFL’s research repository (Infoscience). 
-        </p>
-      </div>
-    </section>
-
-    <!-- RESEARCH HIGHLIGHTS (placeholders) -->
-    <section id="research" class="panel reveal">
-      <div class="container">
-        <h2>Research & Publications</h2>
-        <p>Below are the most recent items (placeholder list). For a canonical publications list, see the EPFL Infoscience entry linked below. </p>
-
-        <div class="cards">
-
-          <div class="card">
-            <h4>📄 Selected publication (placeholder)</h4>
-            <p class="small-meta">Title — Year</p>
-            <p class="paper-abstract">Short blurb placeholder: describe the paper in 2–3 sentences (aims, methods, key results).</p>
-            <p style="margin-top:8px"><a href="https://infoscience.epfl.ch/" target="_blank" rel="noopener">View full publications on EPFL Infoscience</a></p>
-          </div>
-
-          <div class="card">
-            <h4>🎥 Demo / Media (placeholder)</h4>
-            <p class="small-meta">Video & media</p>
-            <p class="paper-abstract">Embed or link to demo videos and photos here. You can also link to conference talks or posters.</p>
-            <p style="margin-top:8px"><a href="https://people.epfl.ch/juliette.hars?lang=en" target="_blank" rel="noopener">EPFL profile</a></p>
-          </div>
-
-          <div class="card">
-            <h4>🧵 Fabrication notes (placeholder)</h4>
-            <p class="small-meta">Methods & materials</p>
-            <p class="paper-abstract">Short notes on knitting/crochet patterns, yarn types, sensor integration techniques and test procedures.</p>
-          </div>
-
-        </div>
-
-        <!-- Link to authoritative list -->
-        <p style="margin-top:16px" class="small-meta">Canonical publications & reports: <a href="https://infoscience.epfl.ch/entities/person/9c5d376a-ed0d-4642-b44f-5ffad139f386" target="_blank" rel="noopener">EPFL Infoscience — Juliette Hars</a>. </p>
-      </div>
-    </section>
-
-    <!-- BEYOND THE LAB -->
-    <section id="beyond" class="panel compact reveal">
-      <div class="container">
-        <h2>Beyond the Lab</h2>
-        <p>Selected outreach, projects and interests.</p>
-
-        <div class="cards">
-          <div class="card">
-            <h4>📣 Outreach & projects</h4>
-            <p class="small-meta">Selected activities and collaborations</p>
-            <ul>
-              <li>Textile design &amp; prototyping workshops (placeholder)</li>
-              <li>Collaborative projects across design and engineering (placeholder)</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h4>🎓 Education & awards</h4>
-            <p class="small-meta">Brief background</p>
-            <ul>
-              <li>Master / current PhD studies at EPFL (details on profile)</li>
-              <li>Student film project award — listed on EPFL news (example)</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h4>⚡ Interests</h4>
-            <p class="small-meta">What Juliette enjoys outside research</p>
-            <ul>
-              <li>Crochet &amp; knitwear design</li>
-              <li>Design and fabrication</li>
-              <li>Creative media &amp; film</li>
-            </ul>
-          </div>
+      <div>
+        <span class="hero-tag">CREATE Lab · EPFL</span>
+        <h1 class="hero-name">Juliette Hars</h1>
+        <p class="hero-role">PhD Student in Robotics</p>
+        <p class="hero-inst">École Polytechnique Fédérale de Lausanne</p>
+        <p class="hero-bio">Designing systems where engineering, materials, and intelligence converge — from soft pneumatic arms to knitted wearable sensors.</p>
+        <div class="hero-links">
+          <a class="pill" href="mailto:juliette.hars@epfl.ch">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="14" height="10" rx="1.5"/><path d="M1 4l7 5 7-5"/></svg>
+            juliette.hars@epfl.ch
+          </a>
+          <a class="pill" href="https://www.linkedin.com/in/juliette-hars-ab859620b/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3.5 2A1.5 1.5 0 102 3.5 1.5 1.5 0 003.5 2zM2 6h3v8H2zm5 0h2.9v1.1h.04A3.18 3.18 0 0112.9 5.9C15 5.9 15 7.6 15 9.1V14h-3V9.7c0-1-.02-2.3-1.4-2.3-1.4 0-1.6 1.1-1.6 2.2V14H7V6z"/></svg>
+            LinkedIn
+          </a>
+          <a class="pill" href="https://github.com/japhten" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 00-2.21 13.64c.35.06.48-.15.48-.34v-1.2c-1.94.42-2.35-.94-2.35-.94-.32-.81-.78-1.02-.78-1.02-.64-.43.05-.43.05-.43.7.05 1.07.72 1.07.72.62 1.07 1.63.76 2.03.58.06-.45.24-.76.44-.93-1.55-.18-3.18-.78-3.18-3.46 0-.76.27-1.39.72-1.87-.07-.18-.31-.89.07-1.85 0 0 .58-.19 1.9.71a6.6 6.6 0 013.46 0c1.32-.9 1.9-.71 1.9-.71.38.96.14 1.67.07 1.85.45.48.72 1.11.72 1.87 0 2.69-1.63 3.28-3.19 3.46.25.22.47.64.47 1.29v1.92c0 .19.13.4.48.34A7 7 0 008 1z"/></svg>
+            GitHub
+          </a>
+          <a class="pill" href="https://people.epfl.ch/juliette.hars?lang=en" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="5" r="2.5"/><path d="M2 14c0-3.31 2.69-6 6-6s6 2.69 6 6"/></svg>
+            EPFL Profile
+          </a>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- CONTACT (reshuffled into cards with short intros) --> 
-     
-    <section id="contact" class="panel reveal"> <div class="container"> 
-      <h2>Contacts</h2> <div class="cards" style="margin-top:12px;"> 
-        <div class="card"> <h4>✉️ Personal Email</h4> <p class="small-meta">Best for informal messages and quick notes.</p> 
-          <p style="margin-top:8px"><a href="mailto:juliette.hars@gmail.com">juliette.hars@gmail.com </a></p> </div>
-          
-        <div class="card"> <h4>🏛️ University Email</h4> <p class="small-meta">For academic or collaboration enquiries.</p> <p style="margin-top:8px"><a href="mailto:juliette.hars@epfl.ch">juliette.hars@epfl.ch</a></p> </div> 
-        
-        <div class="card"> <h4>🔗 LinkedIn</h4> <p class="small-meta">Latest activities and outreach — follow for updates.</p> <p style="margin-top:8px"><a href="https://www.linkedin.com/in/juliette-hars-ab859620b/" target="_blank" rel="noopener">juliettehars</a></p> </div> 
-        
-        <div class="card"> <h4>🏷️ EPFL profile</h4> <p class="small-meta">Official EPFL profile page.</p> <p style="margin-top:8px"><a href="https://people.epfl.ch/juliette.hars?lang=en" target="_blank" rel="noopener">people.epfl.ch/juliette.hars/</a></p> </div>
-        
-        <div class="card"> <h4>💻 GitHub</h4> <p class="small-meta">Code, demos and materials.</p> <p style="margin-top:8px"><a href="https://github.com/japhten" target="_blank" rel="noopener">japhten</a></p> </div>
-      
-      </div> 
-    </div> 
-  </section>
+<!-- ABOUT -->
+<section id="about">
+  <div class="container reveal">
+    <h2 class="sec">About</h2>
+    <div class="sec-rule"></div>
+    <p class="about-body">
+      I am a PhD student at the <strong>CREATE Lab (EPFL)</strong>, where I research <strong>knitted and crocheted textile structures as well as metamaterial sensors </strong> as a route to soft, conformal wearable sensors and actuators combining textile design, materials science, and sensing to create functional garments for soft robotics applications, human interaction, sports gear.
+    </p>
+    <p class="about-body" style="margin-top:1rem">
+      My background spans <strong>soft robotics, adaptive control, data-driven design, and more generally mechanical and electrical engineering</strong>. My master's thesis at the <strong>University of Oxford</strong> (Soft Robotics Lab) applied Feedback Error Learning and neural-network-based adaptive control to a soft pneumatic arm. Earlier, I co-authored a peer-reviewed paper on edible robotic jumpers at EPFL's Laboratory of Intelligent Systems, and worked in AI-driven medical imaging at the NeuroRestore institute.
+    </p>
+    <div class="pub-highlight">
+      <p><strong>Publication —</strong> "Edible Robotic Jumper Powered by Shell Snapping" — co-authored with Dr. Bokeon Kwak, Dario Floreano's lab, EPFL · 2023</p>
+    </div>
+  </div>
+</section>
 
-  </main>
+<!-- EDUCATION -->
+<section id="education">
+  <div class="container reveal">
+    <h2 class="sec">Education</h2>
+    <div class="sec-rule"></div>
+    <div class="timeline">
 
-  <section class="bottom-spacer"></section>
+      <div class="tl-item">
+        <div class="tl-year">2025</div>
+        <div class="tl-title">Master Thesis — University of Oxford</div>
+        <div class="tl-sub">Feedback Error Learning, Simulation and Control of a Soft Pneumatic Arm · Soft Robotics Lab, supervised by Prof. Perla Maiolino</div>
+        <span class="tl-grade">EPFL WISH Excellence Scholarship recipient</span>
+      </div>
 
-  <footer class="site-footer">
-    <div class="container">© <span id="year"></span> Juliette Hars</div>
-  </footer>
+      <div class="tl-item">
+        <div class="tl-year">2022 – 2025</div>
+        <div class="tl-title">MSc in Robotics, Minor in Neuro-X</div>
+        <div class="tl-sub">EPFL — École Polytechnique Fédérale de Lausanne</div>
+        <span class="tl-grade">Grade: 5.48 / 6</span>
+      </div>
 
-  <script src="script.js"></script>
+      <div class="tl-item">
+        <div class="tl-year">2021 – 2022</div>
+        <div class="tl-title">Exchange Year — Electrical Engineering &amp; Robotics</div>
+        <div class="tl-sub">Norwegian University of Science and Technology (NTNU), Trondheim</div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-year">Jul. 2022</div>
+        <div class="tl-title">BSc in Microengineering</div>
+        <div class="tl-sub">EPFL — École Polytechnique Fédérale de Lausanne</div>
+        <span class="tl-grade">Grade: 4.8 / 6</span>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-year">Jun. 2019</div>
+        <div class="tl-title">Swiss Maturité with Honors</div>
+        <div class="tl-sub">Physics and Applied Mathematics · Geneva</div>
+        <span class="tl-grade">Grade: 5.6 / 6</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container reveal">
+    <h2 class="sec">Experience</h2>
+    <div class="sec-rule"></div>
+    <div class="exp-list">
+
+      <div class="exp-card">
+        <div class="exp-header">
+          <span class="exp-org">Zurich Soft Robotics (ZSR)</span>
+          <span class="exp-date">Apr 2024 – Jan 2025</span>
+        </div>
+        <div class="exp-role">Control Engineering Intern → Full-time Intern</div>
+        <div class="exp-desc">Contributed to <em>Solskin</em>, an advanced soft-robotic solar façade system. Developed a Python-based shading analysis tool with animated visualisations; led control programming of the Solskin Hub on Beckhoff PLCs; integrated multiple sensors into a cloud-based time-series database; built an automated monitoring and reporting system. Recognised by the CTO as having exceptional ownership and problem-solving pace. <em>(ETH Zurich spin-off)</em></div>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-header">
+          <span class="exp-org">EPFL — Teaching Assistant</span>
+          <span class="exp-date">Spring 2024</span>
+        </div>
+        <div class="exp-role">Teaching Assistant</div>
+        <div class="exp-desc">Courses: <em>Evolutionary Robotics</em> (genetic algorithms) and <em>Measurement Techniques</em>. Supported student projects, led practicals, and provided feedback on coursework.</div>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-header">
+          <span class="exp-org">LIS Lab, EPFL — Laboratory of Intelligent Systems</span>
+          <span class="exp-date">Summer 2023</span>
+        </div>
+        <div class="exp-role">Research Intern</div>
+        <div class="exp-desc">Research intern in Prof. Dario Floreano's lab. Mathematical modelling of monostable shell structures, FEA-based design optimisation, and prototyping of edible jumpers. Co-authored peer-reviewed publication with Dr. Bokeon Kwak.</div>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-header">
+          <span class="exp-org">EPFL — Scientastic Festival</span>
+          <span class="exp-date">2022, 2023</span>
+        </div>
+        <div class="exp-role">Workshop Facilitator</div>
+        <div class="exp-desc">Facilitated electronics workshops (Arduino &amp; prototyping) for teenagers and adults, communicating technical concepts to non-specialist audiences.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container reveal">
+    <h2 class="sec">Academic Projects</h2>
+    <div class="sec-rule"></div>
+    <div class="proj-grid">
+
+      <div class="proj-card">
+        <div class="proj-year">Spring 2025</div>
+        <div class="proj-title">Soft Pneumatic Arm — Feedback Error Learning</div>
+        <div class="proj-desc">Simulation, control, and adaptive learning for a soft robotic arm. Implemented PID and neural-network-based adaptive control in ROS2 and SOFA simulator with FEM modelling.</div>
+        <div class="proj-tags"><span class="tag">SOFA</span><span class="tag">ROS2</span><span class="tag">Docker</span><span class="tag">PID</span><span class="tag">Neural nets</span><span class="tag">FEM</span></div>
+        <div class="proj-grade">Master Thesis — Oxford</div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-year">Spring 2024</div>
+        <div class="proj-title">Data-Driven Design of a Flexible Finger Joint</div>
+        <div class="proj-desc">Optimised a soft finger joint geometry using a genetic algorithm automating FEA simulations in ABAQUS. Results validated with 3D-printed prototypes and Bayesian optimisation. Described by Prof. Hughes as "a research project in its own right".</div>
+        <div class="proj-tags"><span class="tag">Genetic algorithms</span><span class="tag">ABAQUS</span><span class="tag">Bayesian opt.</span><span class="tag">FEA</span><span class="tag">Python</span></div>
+        <div class="proj-grade">Grade: 6 / 6</div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-year">Autumn 2023</div>
+        <div class="proj-title">Spinal Cord Representations via Self-Supervised Learning</div>
+        <div class="proj-desc">Applied masked autoencoders (MAE) to learn latent representations from MRI volumes of the human spinal cord at EPFL NeuroRestore. Aimed at improving preparation for epidural electrical stimulation (EES) surgeries.</div>
+        <div class="proj-tags"><span class="tag">Deep learning</span><span class="tag">MAE</span><span class="tag">MRI</span><span class="tag">Python</span><span class="tag">Linux</span></div>
+        <div class="proj-grade">Grade: 6 / 6</div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-year">Autumn 2023</div>
+        <div class="proj-title">Synchrower — Robotic Knee for Rowers</div>
+        <div class="proj-desc">Compliant, synchronised robotic knee articulations for rowing ergometers. Handled mechanical design, electronics (ESP32, Arduino), and real-time C++ control at EPFL RRL lab.</div>
+        <div class="proj-tags"><span class="tag">3D design</span><span class="tag">ESP32</span><span class="tag">Arduino</span><span class="tag">C++</span><span class="tag">Control</span></div>
+        <div class="proj-grade">Grade: 5.75 / 6</div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-year">Spring 2023</div>
+        <div class="proj-title">Soft Jumping Edible Robot</div>
+        <div class="proj-desc">Material selection, mathematical modelling of monostable shell structures for energy release, and prototyping of edible jumpers in multiple sizes — leading to a co-authored publication.</div>
+        <div class="proj-tags"><span class="tag">Modelling</span><span class="tag">FEA</span><span class="tag">Matlab</span><span class="tag">Prototyping</span></div>
+        <div class="proj-grade">Grade: 6 / 6 · Published</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container reveal">
+    <h2 class="sec">Skills &amp; Languages</h2>
+    <div class="sec-rule"></div>
+    <div class="skills-grid">
+
+      <div class="skill-group">
+        <h4>Programming</h4>
+        <div class="skill-chips">
+          <span class="chip">Python</span><span class="chip">C++</span><span class="chip">C</span><span class="chip">Matlab</span><span class="chip">ROS2</span><span class="chip">Docker</span><span class="chip">Java</span><span class="chip">Assembly</span><span class="chip">HTML</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h4>Software &amp; Tools</h4>
+        <div class="skill-chips">
+          <span class="chip">ABAQUS</span><span class="chip">Fusion 360</span><span class="chip">Beckhoff PLC</span><span class="chip">Catia</span><span class="chip">LT Spice</span><span class="chip">Logisim</span><span class="chip">LaTeX</span><span class="chip">Atmel Studio</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h4>Languages</h4>
+        <div style="border:1px solid var(--border);border-radius:6px;overflow:hidden;background:var(--bg)">
+          <div class="lang-row" style="padding:0.4rem 0.75rem">
+            <span class="lang-name">French</span>
+            <div class="dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></div>
+            <span class="lang-level">Native</span>
+          </div>
+          <div class="lang-row" style="padding:0.4rem 0.75rem">
+            <span class="lang-name">English</span>
+            <div class="dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></div>
+            <span class="lang-level">C2 · Cambridge</span>
+          </div>
+          <div class="lang-row" style="padding:0.4rem 0.75rem">
+            <span class="lang-name">Italian</span>
+            <div class="dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></div>
+            <span class="lang-level">Fluent</span>
+          </div>
+          <div class="lang-row" style="padding:0.4rem 0.75rem">
+            <span class="lang-name">German</span>
+            <div class="dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span><span class="dot off"></span></div>
+            <span class="lang-level">B2 · Goethe</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- AWARDS & EXTRA -->
+<section id="awards" style="border-top:1px solid var(--border)">
+  <div class="container reveal">
+    <h2 class="sec">Awards &amp; Activities</h2>
+    <div class="sec-rule"></div>
+    <div class="awards-list">
+      <div class="award-item">
+        <span class="award-year">2025</span>
+        <p class="award-body"><strong>EPFL WISH Excellence Scholarship</strong> for Master Thesis — awarded for academic excellence and research potential in robotics.</p>
+      </div>
+      <div class="award-item">
+        <span class="award-year">2024</span>
+        <p class="award-body"><strong>EPFL Prize for Best Social Sciences Work</strong> — for the medium-length film <em>Rupture</em>. <a href="https://news.unil.ch/display/1706091460393" target="_blank" rel="noopener">See coverage →</a></p>
+      </div>
+      <div class="award-item">
+        <span class="award-year">2023</span>
+        <p class="award-body"><strong>Member of Swiss Solar Boat</strong> — Electronics and control team.</p>
+      </div>
+      <div class="award-item">
+        <span class="award-year">2020</span>
+        <p class="award-body"><strong>Swiss Rowing Champion</strong> — and vice-champion in 2017. Eight years of national-level practice.</p>
+      </div>
+      <div class="award-item">
+        <span class="award-year">2019</span>
+        <p class="award-body"><strong>Richelieu Madame de Staël Literature Prize</strong>, Geneva — for the short story <em>Puissent nos cœurs battre</em>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container reveal">
+    <h2 class="sec">Contact</h2>
+    <div class="sec-rule"></div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h4>University email</h4>
+        <a href="mailto:juliette.hars@epfl.ch">juliette.hars@epfl.ch</a>
+      </div>
+      <div class="contact-card">
+        <h4>Personal email</h4>
+        <a href="mailto:juliette.hars@gmail.com">juliette.hars@gmail.com</a>
+      </div>
+      <div class="contact-card">
+        <h4>LinkedIn</h4>
+        <a href="https://www.linkedin.com/in/juliette-hars-ab859620b/" target="_blank" rel="noopener">juliette-hars-ab859620b</a>
+      </div>
+      <div class="contact-card">
+        <h4>EPFL profile</h4>
+        <a href="https://people.epfl.ch/juliette.hars?lang=en" target="_blank" rel="noopener">people.epfl.ch/juliette.hars</a>
+      </div>
+      <div class="contact-card">
+        <h4>GitHub</h4>
+        <a href="https://github.com/japhten" target="_blank" rel="noopener">github.com/japhten</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span id="year"></span> Juliette Hars &nbsp;·&nbsp; CREATE Lab, EPFL
+</footer>
+
+<script>
+document.getElementById('year').textContent = '© ' + new Date().getFullYear();
+
+const reveals = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+  });
+}, { threshold: 0.08 });
+reveals.forEach(el => io.observe(el));
+</script>
 </body>
 </html>
