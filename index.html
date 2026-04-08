@@ -72,10 +72,9 @@ p.sec-lead{color:var(--ink-2);margin-bottom:2rem;font-size:1rem}
 #about{background:var(--bg-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 .about-body{font-size:1.05rem;line-height:1.85;color:var(--ink-2)}
 .about-body strong{color:var(--ink);font-weight:500}
-.pub-highlight{margin-top:1.5rem;padding:1rem 1.25rem;background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--red);border-radius:0 6px 6px 0}
+.pub-highlight{margin-top:1.5rem;padding:1rem 1.25rem;background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--red);border-radius:0 6px 6px 0; cursor: pointer; transition: background 0.2s}
+.pub-highlight:hover{background:var(--bg-2)}
 .pub-highlight p{font-size:0.9rem;color:var(--ink-2);margin:0}
-.pub-highlight a{color:var(--red);text-decoration:none}
-.pub-highlight a:hover{text-decoration:underline}
 
 /* EDUCATION TIMELINE */
 #education{background:var(--bg)}
@@ -225,7 +224,7 @@ footer a{color:rgba(255,255,255,0.5);text-decoration:none}
     <p class="about-body" style="margin-top:1rem">
       My background spans <strong>soft robotics, adaptive control, data-driven design, and more generally mechanical and electrical engineering</strong>. My master's thesis at the <strong>University of Oxford</strong> (Soft Robotics Lab) applied Feedback Error Learning and neural-network-based adaptive control to a soft pneumatic arm. Earlier, I co-authored a publication on edible robotic jumpers at EPFL's Laboratory of Intelligent Systems, and worked in AI-driven medical imaging at the NeuroRestore Laboratory.
     </p>
-    <div class="pub-highlight">
+    <div class="pub-highlight" onclick="window.open('https://advanced.onlinelibrary.wiley.com/doi/10.1002/admt.202401230', '_blank')">
       <p><strong>Publication —</strong> "Edible Robotic Jumper Powered by Shell Snapping" — co-authored with Dr. Bokeon Kwak, Dario Floreano's lab, EPFL · 2023</p>
     </div>
   </div>
